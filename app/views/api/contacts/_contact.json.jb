@@ -1,0 +1,16 @@
+{
+    id: contact.id,
+    full_name: contact.full_name,
+    first_name: contact.first_name,
+    middle_name: contact.middle_name,
+    last_name: contact.last_name,
+    bio: contact.bio,
+    email: contact.email,
+    phone_number: contact.phone_number,
+    address: contact.address,
+    latitude: contact.latitude,
+    longitude: contact.longitude,
+    created_at: contact.friendly_updated_at,
+    user_id: contact.user_id,
+    current_user: current_user
+  }
