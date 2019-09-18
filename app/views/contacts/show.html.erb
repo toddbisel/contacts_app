@@ -1,0 +1,13 @@
+<h1>Contact Show</h1>
+
+<h2>Contact #: <%= @contact.id %></h2>
+<h2>First name: <%= @contact.first_name %></h2>
+<h2>Middle name: <%= @contact.middle_name %></h2>
+<h2>Last name: <%= @contact.last_name %></h2>
+<h2>Full Name: <%= @contact.full_name %></h2>
+<h2>Phone Number: <%= @contact.phone_number %></h2>
+<h2>Email: <%= @contact.email %></h2>
+<h2>I belong to: <%= @contact.user.name %></h2>
+<br>
+<h1><a href="/contacts/edit/<%= @contact.id %>">Edit Contact</h1>
+<h1><a href="/contacts/">All Contacts</a></h1>

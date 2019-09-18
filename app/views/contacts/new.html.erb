@@ -1,0 +1,26 @@
+<h1>  New Contact</h1>
+
+<form action="/contacts" method="post">
+ <div>
+    First name: <input type="text" name="first_name">
+  </div>
+  <div>
+    Middle Name: <input type="text" name="middle_ame">
+  </div>
+  <div>
+    Last Name: <input type="text" name="last_name">
+  </div>
+  <div>
+    Phone Number: <input type="text" name="phone_umber">
+  </div>
+  <div>
+    User ID:<br>
+    <select name="user_id" id="">
+    <% User.all.each do |user| %>
+      <option value="<%= user.id %>"><%= user.name %> </option>
+    <% end %>
+  </div>
+
+  <div><br></div>
+  <input type="submit" value="Create Contact"> 
+</form>

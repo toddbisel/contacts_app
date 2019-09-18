@@ -12,5 +12,5 @@
     longitude: contact.longitude,
     created_at: contact.friendly_updated_at,
     user_id: contact.user_id,
-    current_user: current_user
+   # current_user: current_user
   }

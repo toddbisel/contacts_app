@@ -1,0 +1,15 @@
+<h1>Contact Index</h1>
+<% @contacts.each do |contact| %>
+
+
+<h2>Contact #: <%= contact.id %></h2>
+<h2>First name: <%= contact.first_name %></h2>
+<h2>Middle name: <%= contact.middle_name %></h2>
+<h2>Last name: <%= contact.last_name %></h2>
+<h2>Full Name: <%= contact.full_name %></h2>
+<h2>Phone Number: <%= contact.phone_number %></h2>
+<h2>Email: <%= contact.email %></h2>
+<h2>I belong to: <%= contact.user.name %></h2>
+<h2><a href="/contacts/<%= contact.id%>">More Info</a></h2>
+<br>
+<%end%>

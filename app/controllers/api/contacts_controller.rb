@@ -3,29 +3,30 @@ class Api::ContactsController < ApplicationController
 
   def index
 
-    if current_user
+    
+    #if current_user
 
-      @contacts = Contact.all
+  @contacts = Contact.all
 
-      if params[:first_name]
-        @contacts = Contact.where("first_name iLIKE ?", "%#{params[:first_name]}%")
-      elsif params[:last_name]
-        @contacts = Contact.where("last_name iLIKE ?", "%#{params[:last_name]}%")
-      elsif params[:middle_name]
-        @contacts = Contact.where("middle_name iLIKE ?", "%#{params[:middle_name]}%")
-      elsif params[:bio]
-        @contacts = Contact.where("bio iLIKE ?", "%#{params[:bio]}%")
-      elsif params[:email]
-        @contacts = Contact.where("email iLIKE ?", "%#{params[:email]}%")
-      elsif params[:phone_number]
-        @contacts = Contact.where("phone_number iLIKE ?", "%#{params[:phone_number]}%") 
-      end
-
-      render 'index.json.jb'
-
-    else
-      render json: []
+  if params[:first_name]
+    @contacts = Contact.where("first_name iLIKE ?", "%#{params[:first_name]}%")
+    elsif params[:last_name]
+      @contacts = Contact.where("last_name iLIKE ?", "%#{params[:last_name]}%")
+    elsif params[:middle_name]
+      @contacts = Contact.where("middle_name iLIKE ?", "%#{params[:middle_name]}%")
+    elsif params[:bio]
+      @contacts = Contact.where("bio iLIKE ?", "%#{params[:bio]}%")
+    elsif params[:email]
+      @contacts = Contact.where("email iLIKE ?", "%#{params[:email]}%")
+    elsif params[:phone_number]
+      @contacts = Contact.where("phone_number iLIKE ?", "%#{params[:phone_number]}%") 
     end
+
+    render 'index.json.jb'
+
+    #else
+     # render json: []
+    #end
 
   end
 

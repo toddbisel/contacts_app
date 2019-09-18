@@ -1,0 +1,33 @@
+<h1>Edit Contact </h1>
+
+<form action="/contacts/<%= @contact.id%>" method="post">
+  <input type= "hidden" name= "_method" value= "patch">
+  <div>
+    First Name: <input type="text" name="first_name" value="<%= @contact.first_name%>">
+  </div>
+<div>
+    Middle Name: <input type="text" name="middle_name" value="<%= @contact.middle_name%>">
+  </div>
+<div>
+    Last Name: <input type="text" name="last_name" value="<%= @contact.last_name%>">
+  </div>
+  <div>
+    Phone Number: <input type="text" name="phone_number" value="<%= @contact.phone_number%>">
+  </div>
+  <div>
+    Email: <input type="text" name="email" value="<%= @contact.email%>">
+  </div>
+  <div>
+    User ID:<br>
+    <select name="user_id" id="">
+    <% User.all.each do |user| %>
+      <option value="<%= user.id %>"><%= user.name %> </option>
+    <% end %>
+  </div>
+
+  <br><input type="submit" value="Edit contact">
+</form>
+<br>
+<a href="/contacts/<%= @contact.id %>" data-method="delete">Delete contact</a>
+<br>
+<a href="/contacts/">All contacts</a>
